@@ -1,5 +1,6 @@
 let strip: neopixel.Strip = null
 basic.forever(function () {
+    music.setVolume(120)
     music.setTempo(180)
     music.playTone(392, music.beat(BeatFraction.Whole))
     music.rest(music.beat(BeatFraction.Whole))
@@ -144,6 +145,9 @@ basic.forever(function () {
     strip = neopixel.create(DigitalPin.P1, 24, NeoPixelMode.RGB)
 })
 basic.forever(function () {
+	
+})
+basic.forever(function () {
     strip.showColor(neopixel.colors(NeoPixelColors.Yellow))
     basic.pause(600)
     strip.showColor(neopixel.colors(NeoPixelColors.Green))
@@ -158,18 +162,37 @@ basic.forever(function () {
     basic.pause(400)
     strip.showColor(neopixel.colors(NeoPixelColors.Red))
     basic.pause(400)
-    strip.showRainbow(1, 360)
-    basic.pause(1600)
     strip.showColor(neopixel.colors(NeoPixelColors.Yellow))
-    basic.pause(1600)
+    basic.pause(400)
+    for (let index = 0; index < 4; index++) {
+        strip.showColor(neopixel.colors(NeoPixelColors.Orange))
+        basic.pause(200)
+        strip.showColor(neopixel.colors(NeoPixelColors.Black))
+        basic.pause(200)
+    }
+    for (let index = 0; index < 4; index++) {
+        strip.showColor(neopixel.colors(NeoPixelColors.Red))
+        basic.pause(200)
+        strip.showColor(neopixel.colors(NeoPixelColors.Black))
+        basic.pause(200)
+    }
     for (let index = 0; index < 3; index++) {
         strip.showColor(neopixel.colors(NeoPixelColors.Orange))
         basic.pause(200)
-        strip.showColor(neopixel.colors(NeoPixelColors.White))
+        strip.showColor(neopixel.colors(NeoPixelColors.Black))
         basic.pause(200)
     }
-    basic.pause(5000)
-})
-basic.forever(function () {
-	
+    strip.showColor(neopixel.colors(NeoPixelColors.Yellow))
+    basic.pause(400)
+    strip.showColor(neopixel.colors(NeoPixelColors.Red))
+    basic.pause(400)
+    strip.showColor(neopixel.colors(NeoPixelColors.Violet))
+    basic.pause(400)
+    strip.showColor(neopixel.colors(NeoPixelColors.Orange))
+    basic.pause(400)
+    strip.showColor(neopixel.colors(NeoPixelColors.Black))
+    basic.pause(4000)
+    strip.showColor(neopixel.colors(NeoPixelColors.Blue))
+    basic.pause(600)
+    strip.showColor(neopixel.colors(NeoPixelColors.Blue))
 })
