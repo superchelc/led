@@ -165,19 +165,19 @@ basic.forever(function () {
     strip.showColor(neopixel.colors(NeoPixelColors.Yellow))
     basic.pause(400)
     for (let index = 0; index < 4; index++) {
-        strip.showColor(neopixel.colors(NeoPixelColors.Orange))
+        strip.showRainbow(1, 360)
         basic.pause(200)
         strip.showColor(neopixel.colors(NeoPixelColors.Black))
         basic.pause(200)
     }
     for (let index = 0; index < 4; index++) {
-        strip.showColor(neopixel.colors(NeoPixelColors.Red))
+        strip.showColor(neopixel.colors(NeoPixelColors.Orange))
         basic.pause(200)
         strip.showColor(neopixel.colors(NeoPixelColors.Black))
         basic.pause(200)
     }
     for (let index = 0; index < 3; index++) {
-        strip.showColor(neopixel.colors(NeoPixelColors.Orange))
+        strip.showColor(neopixel.colors(NeoPixelColors.Red))
         basic.pause(200)
         strip.showColor(neopixel.colors(NeoPixelColors.Black))
         basic.pause(200)
@@ -192,7 +192,12 @@ basic.forever(function () {
     basic.pause(400)
     strip.showColor(neopixel.colors(NeoPixelColors.Black))
     basic.pause(4000)
+    for (let index = 0; index < 10; index++) {
+        strip.showColor(neopixel.colors(NeoPixelColors.Blue))
+        basic.pause(200)
+        strip.showColor(neopixel.colors(NeoPixelColors.Indigo))
+        basic.pause(200)
+    }
     strip.showColor(neopixel.colors(NeoPixelColors.Blue))
-    basic.pause(600)
-    strip.showColor(neopixel.colors(NeoPixelColors.Blue))
+    basic.pause(1200)
 })
